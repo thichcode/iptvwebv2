@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPTV Player - TizenBrew</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: white;
+        }
+        .container {
+            display: flex;
+            height: 80vh;
+        }
+        .channel-list {
+            width: 300px;
+            overflow-y: auto;
+            border-right: 1px solid #333;
+            padding-right: 10px;
+        }
+        .video-container {
+            flex: 1;
+            padding-left: 20px;
+        }
+        .channel-item {
+            padding: 10px;
+            margin: 5px 0;
+            background: #2a2a2a;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .channel-item:hover {
+            background: #3a3a3a;
+        }
+        .channel-item.active {
+            background: #0078d4;
+        }
+        #videoPlayer {
+            width: 100%;
+            height: 70vh;
+            background: black;
+        }
+        .controls {
+            margin-top: 10px;
+        }
+        input[type="text"] {
+            width: 70%;
+            padding: 8px;
+            background: #333;
+            border: 1px solid #555;
+            color: white;
+            border-radius: 4px;
+        }
+        button {
+            padding: 8px 16px;
+            background: #0078d4;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+        button:hover {
+            background: #005a9e;
+        }
+    </style>
+</head>
+<body>
+    <h1>📺 IPTV Player for TizenBrew</h1>
+    
+    <div class="controls">
+        <input type="text" id="m3uUrl" placeholder="Nhập URL M3U playlist hoặc chọn file local">
+        <button onclick="loadPlaylist()">Tải Playlist</button>
+        <button onclick="loadSamplePlaylist()">Playlist Mẫu</button>
+        <button onclick="loadTestFile()">Tải File Test</button>
+        <input type="file" id="fileInput" accept=".m3u,.m3u8" onchange="handleFileSelect(this.files)">
+        <br><br>
+        <label><input type="checkbox" id="useCorsProxy"> Sử dụng CORS Proxy (cho stream bị chặn)</label>
+    </div>
+
+    <div class="container">
+        <div class="channel-list" id="channelList">
+            <!-- Channel list will be populated here -->
+        </div>
+        <div class="video-container">
+            <video id="videoPlayer" controls>
+                Trình duyệt của bạn không hỗ trợ video player.
+            </video>
+            <div id="nowPlaying">Chọn kênh để bắt đầu xem</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="iptv-player.js"></script>
+</body>
+</html>
