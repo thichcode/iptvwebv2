@@ -1,6 +1,29 @@
 (function () {
   var DEFAULT_PLAYLIST = "https://raw.githubusercontent.com/vuminhthanh12/vuminhthanh12/refs/heads/main/vmttv";
 
+var FALLBACK_M3U = "#EXTM3U\n" +
+"#EXTINF:0,VTV CanTho\n" +
+"http://192.168.1.7:1234/udp/225.1.3.3:30120\n" +
+"#EXTINF:0,VTV1 (HD 8.5Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.3.1:30120\n" +
+"#EXTINF:0,VTV2 (HD 8.5Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.3.5:30120\n" +
+"#EXTINF:0,VTV3 (HD 8.5Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.3.2:30120\n" +
+"#EXTINF:0,VTV4 (HD 8.5Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.3.6:30120\n" +
+"#EXTINF:0,VTV5 (HD 8.5Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.3.4:30120\n" +
+"#EXTINF:0,VTV5 Tây Nam B\n" +
+"http://192.168.1.7:1234/udp/225.1.3.42:30120\n" +
+"#EXTINF:0,VTV5 Tây Nguyên (HD 8.5Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.3.30:30120\n" +
+"#EXTINF:0,VTV7 (HD 8.5Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.3.15:30120\n" +
+"#EXTINF:0,VTV8 (HD 8.5Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.3.11:30120\n" +
+"#EXTINF:0,VTV9 (HD 8.5Mbps)\n";
+
   var channels = [];
   var currentIndex = 0;
   var numInput = "";
@@ -80,6 +103,7 @@
 
   function loadPlaylist() {
     var url = getPlaylistUrl();
+    var useFallback = (url === DEFAULT_PLAYLIST);
     setStatus("Fetching playlist...");
     var xhr = new XMLHttpRequest();
     xhr.open("GET", url, true);
@@ -90,13 +114,27 @@
           renderChannelList();
           setStatus("Ready - " + channels.length + " channels");
           setNowPlaying(channels.length > 0 ? "Select a channel" : "No channels found");
+        } else if (useFallback) {
+          setStatus("Error: HTTP " + xhr.status + " - using fallback");
+          channels = parseM3U(FALLBACK_M3U);
+          renderChannelList();
+          setStatus("Fallback loaded - " + channels.length + " channels");
+          setNowPlaying(channels.length > 0 ? "Select a channel" : "No channels found");
         } else {
           setStatus("Error: HTTP " + xhr.status);
         }
       }
     };
     xhr.onerror = function () {
-      setStatus("Error: Network failed");
+      if (useFallback) {
+        setStatus("Error: Network failed - using fallback");
+        channels = parseM3U(FALLBACK_M3U);
+        renderChannelList();
+        setStatus("Fallback loaded - " + channels.length + " channels");
+        setNowPlaying(channels.length > 0 ? "Select a channel" : "No channels found");
+      } else {
+        setStatus("Error: Network failed");
+      }
     };
     xhr.send();
   }
