@@ -22,7 +22,184 @@ var FALLBACK_M3U = "#EXTM3U\n" +
 "http://192.168.1.7:1234/udp/225.1.3.15:30120\n" +
 "#EXTINF:0,VTV8 (HD 8.5Mbps)\n" +
 "http://192.168.1.7:1234/udp/225.1.3.11:30120\n" +
-"#EXTINF:0,VTV9 (HD 8.5Mbps)\n";
+"#EXTINF:0,VTV9 (HD 8.5Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.3.9:30120\n" +
+"#EXTINF:0,ABC Australia (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.21:30120\n" +
+"#EXTINF:0,ANTV HD (HD 8.5Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.3.23:30120\n" +
+"#EXTINF:0,ATV HD _ TH An Giang (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.173:30120\n" +
+"#EXTINF:0,AXN (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.225:30120\n" +
+"#EXTINF:0,Animal Planet (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.231:30120\n" +
+"#EXTINF:0,Arirang\n" +
+"http://192.168.1.7:1234/udp/225.1.1.201:30120\n" +
+"#EXTINF:0,Asian Food Network (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.198:30120\n" +
+"#EXTINF:0,BBC CbeeBies (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.134:30120\n" +
+"#EXTINF:0,BBC Earth (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.24:30120\n" +
+"#EXTINF:0,BBC Lifestyle (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.52:30120\n" +
+"#EXTINF:0,BBC News (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.74:30120\n" +
+"#EXTINF:0,BGTV _ TH B\n" +
+"http://192.168.1.7:1234/udp/225.1.3.145:30120\n" +
+"#EXTINF:0,BLTV HD _ TH B\n" +
+"http://192.168.1.7:1234/udp/225.1.3.102:30120\n" +
+"#EXTINF:0,BTV9 B Channel (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.189:30120\n" +
+"#EXTINF:0,Bloomberg (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.91:30120\n" +
+"#EXTINF:0,Boomerang (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.138:30120\n" +
+"#EXTINF:0,CNA (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.202:30120\n" +
+"#EXTINF:0,CNBC\n" +
+"http://192.168.1.7:1234/udp/225.1.3.143:30120\n" +
+"#EXTINF:0,CNN (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.242:30120\n" +
+"#EXTINF:0,CTV HD _ TH Cà Mau (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.104:30120\n" +
+"#EXTINF:0,Cartoon Network (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.231:30120\n" +
+"#EXTINF:0,DW (English) (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.46:30120\n" +
+"#EXTINF:0,Da Vinci (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.197:30120\n" +
+"#EXTINF:0,DaNangTV1 HD _ TH TP.\n" +
+"http://192.168.1.7:1234/udp/225.1.3.99:30120\n" +
+"#EXTINF:0,Discovery Asia (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.223:30120\n" +
+"#EXTINF:0,Discovery Channel (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.238:30120\n" +
+"#EXTINF:0,Dolife Hospital\n" +
+"http://192.168.1.7:1234/udp/225.1.1.127:30120\n" +
+"#EXTINF:0,Dreamworks (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.136:30120\n" +
+"#EXTINF:0,Event\n" +
+"http://192.168.1.7:1234/udp/225.1.1.92:30120\n" +
+"#EXTINF:0,FPT Gi\n" +
+"http://192.168.1.7:1234/udp/225.1.1.2:30120\n" +
+"#EXTINF:0,Fashion TV (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.227:30120\n" +
+"#EXTINF:0,France 24 (English) (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.211:30120\n" +
+"#EXTINF:0,Grand Phoenix Hotel\n" +
+"http://192.168.1.7:1234/udp/225.1.1.66:30120\n" +
+"#EXTINF:0,H1 HD _ TH Hà N\n" +
+"http://192.168.1.7:1234/udp/225.1.3.22:30120\n" +
+"#EXTINF:0,H2 HD _ TH Hà N\n" +
+"http://192.168.1.7:1234/udp/225.1.3.49:30120\n" +
+"#EXTINF:0,HBO (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.112:30120\n" +
+"#EXTINF:0,HCATV5\n" +
+"http://192.168.1.7:1234/udp/225.1.2.144:30120\n" +
+"#EXTINF:0,HGTV HD _ TH H\n" +
+"http://192.168.1.7:1234/udp/225.1.3.126:30120\n" +
+"#EXTINF:0,HTV Keys\n" +
+"http://192.168.1.7:1234/udp/225.1.1.177:30120\n" +
+"#EXTINF:0,HTV Th\n" +
+"http://192.168.1.7:1234/udp/225.1.3.25:30120\n" +
+"#EXTINF:0,HTV1\n" +
+"http://192.168.1.7:1234/udp/225.1.1.180:30120\n" +
+"#EXTINF:0,HTV2 Vie Channel (HD 8.5Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.3.13:30120\n" +
+"#EXTINF:0,HTV3\n" +
+"http://192.168.1.7:1234/udp/225.1.1.178:30120\n" +
+"#EXTINF:0,HTV7 HD (HD 8.5Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.3.8:30120\n" +
+"#EXTINF:0,HTV9 HD (HD 8.5Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.3.12:30120\n" +
+"#EXTINF:0,HTVC Ca Nh\n" +
+"http://192.168.1.7:1234/udp/225.1.3.97:30120\n" +
+"#EXTINF:0,HTVC Du L\n" +
+"http://192.168.1.7:1234/udp/225.1.3.21:30120\n" +
+"#EXTINF:0,HTVC Gia\n" +
+"http://192.168.1.7:1234/udp/225.1.3.84:30120\n" +
+"#EXTINF:0,HTVC Ph\n" +
+"http://192.168.1.7:1234/udp/225.1.3.53:30120\n" +
+"#EXTINF:0,HTVC Phim (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.184:30120\n" +
+"#EXTINF:0,HTVC Thu\n" +
+"http://192.168.1.7:1234/udp/225.1.3.28:30120\n" +
+"#EXTINF:0,HTVC+ (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.181:30120\n" +
+"#EXTINF:0,HY _ TH H\n" +
+"http://192.168.1.7:1234/udp/225.1.1.118:30120\n" +
+"#EXTINF:0,KBS World (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.196:30120\n" +
+"#EXTINF:0,KG _ TH Kiên Giang (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.182:30120\n" +
+"#EXTINF:0,KRT _ TH Kon Tum (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.36:30120\n" +
+"#EXTINF:0,KTV HD _ TH Khánh Hòa (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.133:30120\n" +
+"#EXTINF:0,LA34 _ TH Long An\n" +
+"http://192.168.1.7:1234/udp/225.1.1.162:30120\n" +
+"#EXTINF:0,LTV HD _ TH Lai Châu (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.36:30120\n" +
+"#EXTINF:0,NHK World Japan (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.47:30120\n" +
+"#EXTINF:0,NTV HD _ TH Ninh Bình (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.185:30120\n" +
+"#EXTINF:0,Outdoor Channel (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.215:30120\n" +
+"#EXTINF:0,PTV HD _ TH Phú Th\n" +
+"http://192.168.1.7:1234/udp/225.1.3.71:30120\n" +
+"#EXTINF:0,QPVN (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.217:30120\n" +
+"#EXTINF:0,QTV1 HD _ TH Qu\n" +
+"http://192.168.1.7:1234/udp/225.1.3.32:30120\n" +
+"#EXTINF:0,SCTV6 (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.188:30120\n" +
+"#EXTINF:0,STV _ TH S\n" +
+"http://192.168.1.7:1234/udp/225.1.1.98:30120\n" +
+"#EXTINF:0,STV1 _ TH Sóc Tr\n" +
+"http://192.168.1.7:1234/udp/225.1.1.159:30120\n" +
+"#EXTINF:0,THLC _ TH Lào Cai (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.119:30120\n" +
+"#EXTINF:0,THP HD _ TH TP. H\n" +
+"http://192.168.1.7:1234/udp/225.1.3.80:30120\n" +
+"#EXTINF:0,THTG HD _ TH Ti\n" +
+"http://192.168.1.7:1234/udp/225.1.3.46:30120\n" +
+"#EXTINF:0,THTPCT HD _ TH TP. C\n" +
+"http://192.168.1.7:1234/udp/225.1.1.132:30120\n" +
+"#EXTINF:0,THTV HD _ TH Trà Vinh (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.172:30120\n" +
+"#EXTINF:0,THVL1 HD _ TH V\n" +
+"http://192.168.1.7:1234/udp/225.1.3.7:30120\n" +
+"#EXTINF:0,THVL2 HD _ TH V\n" +
+"http://192.168.1.7:1234/udp/225.1.3.19:30120\n" +
+"#EXTINF:0,THVL3 HD _ TH V\n" +
+"http://192.168.1.7:1234/udp/225.1.3.16:30120\n" +
+"#EXTINF:0,THVL4 HD _ TH V\n" +
+"http://192.168.1.7:1234/udp/225.1.3.20:30120\n" +
+"#EXTINF:0,TLC (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.236:30120\n" +
+"#EXTINF:0,TN1 HD _ TH Thái Nguyên (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.179:30120\n" +
+"#EXTINF:0,TRT _ TH Th\n" +
+"http://192.168.1.7:1234/udp/225.1.1.161:30120\n" +
+"#EXTINF:0,TTV _ TH Thanh Hóa\n" +
+"http://192.168.1.7:1234/udp/225.1.2.184:30120\n" +
+"#EXTINF:0,TTV _ TH Tuyên Quang (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.188:30120\n" +
+"#EXTINF:0,TV5 Monde Asie (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.200:30120\n" +
+"#EXTINF:0,Thanh Hóa\n" +
+"http://192.168.1.7:1234/udp/225.1.4.162:30120\n" +
+"#EXTINF:0,The Mira Hotel\n" +
+"http://192.168.1.7:1234/udp/225.1.1.123:30120\n" +
+"#EXTINF:0,The Ocean Resort\n" +
+"http://192.168.1.7:1234/udp/225.1.1.121:30120\n" +
+"#EXTINF:0,WBTV (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.139:30120\n" +
+"#EXTINF:-1 tvg-id=\"vtv6hd\" group-title=\"ASEAN HUYNDAI CUP 2026\" tvg-logo=\"https://raw.githubusercontent.com/vuminhthanh12/Logo/refs/heads/main/VTV6.png\", VTV6\n" +
+"https://247.dpdns.org/VIP/vtv6/nactha\n";
 
   var channels = [];
   var currentIndex = 0;
