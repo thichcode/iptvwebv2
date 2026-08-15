@@ -131,8 +131,7 @@ var FALLBACK_M3U = "#EXTM3U\n" +
 "#EXTINF:0,Thanh Hóa\nhttp://192.168.1.7:1234/udp/225.1.4.162:30120\n" +
 "#EXTINF:0,The Mira Hotel\nhttp://192.168.1.7:1234/udp/225.1.1.123:30120\n" +
 "#EXTINF:0,The Ocean Resort\nhttp://192.168.1.7:1234/udp/225.1.1.121:30120\n" +
-"#EXTINF:0,WBTV (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.139:30120\n"
-";
+"#EXTINF:0,WBTV (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.139:30120\n";
 
   var channels = [];
   var currentIndex = 0;
