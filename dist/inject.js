@@ -134,6 +134,7 @@ var FALLBACK_M3U = "#EXTM3U\n" +
 "#EXTINF:0,WBTV (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.139:30120\n";
 
   var channels = [];
+  var displayOrder = [];
   var currentIndex = 0;
   var numInput = "";
   var numTimeout = null;
@@ -164,10 +165,13 @@ var FALLBACK_M3U = "#EXTM3U\n" +
 
   function getPlaylistUrl() {
     var params = {};
-    location.search.substr(1).split("&").forEach(function (p) {
+    var parts = location.search.substr(1).split("&");
+    for (var i = 0; i < parts.length; i++) {
+      var p = parts[i];
+      if (!p) continue;
       var kv = p.split("=");
       if (kv[0]) params[decodeURIComponent(kv[0])] = kv[1] ? decodeURIComponent(kv[1]) : "";
-    });
+    }
     return params.url || DEFAULT_PLAYLIST;
   }
 
@@ -309,6 +313,7 @@ var FALLBACK_M3U = "#EXTM3U\n" +
   function renderChannelList() {
     if (!listEl) return;
     listEl.innerHTML = "";
+    displayOrder = [];
     var groups = groupChannels(channels);
     var total = 0;
     var keys = Object.keys(groups).sort();
@@ -321,6 +326,7 @@ var FALLBACK_M3U = "#EXTM3U\n" +
       var chs = groups[grpName];
       for (var j = 0; j < chs.length; j++) {
         var ch = chs[j];
+        displayOrder.push(ch.index);
         var btn = document.createElement("button");
         btn.className = "ch";
         btn.textContent = (total + 1) + ". " + ch.name;
@@ -383,11 +389,16 @@ var FALLBACK_M3U = "#EXTM3U\n" +
   }
 
   function changeChannel(delta) {
-    if (channels.length === 0) return;
-    var n = currentIndex + delta;
-    if (n < 0) n = channels.length - 1;
-    if (n >= channels.length) n = 0;
-    playChannel(n);
+    if (channels.length === 0 || displayOrder.length === 0) return;
+    var pos = -1;
+    for (var k = 0; k < displayOrder.length; k++) {
+      if (displayOrder[k] === currentIndex) { pos = k; break; }
+    }
+    if (pos === -1) pos = 0;
+    pos += delta;
+    if (pos < 0) pos = displayOrder.length - 1;
+    if (pos >= displayOrder.length) pos = 0;
+    playChannel(displayOrder[pos]);
     focusCurrent();
   }
 
@@ -425,8 +436,8 @@ var FALLBACK_M3U = "#EXTM3U\n" +
     if (numInput) {
       var n = parseInt(numInput, 10);
       numInput = "";
-      if (n >= 1 && n <= channels.length) {
-        playChannel(n - 1);
+      if (n >= 1 && n <= displayOrder.length) {
+        playChannel(displayOrder[n - 1]);
         focusCurrent();
       }
     }
