@@ -2,136 +2,358 @@
   var DEFAULT_PLAYLIST = "https://raw.githubusercontent.com/vuminhthanh12/vuminhthanh12/refs/heads/main/vmttv";
 
 var FALLBACK_M3U = "#EXTM3U\n" +
-"#EXTINF:0,VTV C\nhttp://192.168.1.7:1234/udp/225.1.2.245:30120\n" +
-"#EXTINF:0,VTV1 (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.249:30120\n" +
-"#EXTINF:0,VTV2 (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.13:30120\n" +
-"#EXTINF:0,VTV3 (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.247:30120\n" +
-"#EXTINF:0,VTV4 (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.20:30120\n" +
-"#EXTINF:0,VTV5 (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.131:30120\n" +
-"#EXTINF:0,VTV5 Tây Nam B\nhttp://192.168.1.7:1234/udp/225.1.2.236:30120\n" +
-"#EXTINF:0,VTV5 Tây Nguyên (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.108:30120\n" +
-"#EXTINF:0,VTV7 (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.96:30120\n" +
-"#EXTINF:0,VTV8 (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.166:30120\n" +
-"#EXTINF:0,VTV9 (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.128:30120\n" +
-"#EXTINF:0,Unknown\nhttp://192.168.1.7:1234/udp/225.1.1.152:30120\n" +
-"#EXTINF:0,Unknown\nhttp://192.168.1.7:1234/udp/225.1.1.151:30120\n" +
-"#EXTINF:0,Unknown\nhttp://192.168.1.7:1234/udp/225.1.1.74:30120\n" +
-"#EXTINF:0,ABC Australia (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.21:30120\n" +
-"#EXTINF:0,ANTV HD (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.169:30120\n" +
-"#EXTINF:0,ATV HD _ TH An Giang (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.173:30120\n" +
-"#EXTINF:0,AXN (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.225:30120\n" +
-"#EXTINF:0,Animal Planet (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.231:30120\n" +
-"#EXTINF:0,Arirang\nhttp://192.168.1.7:1234/udp/225.1.1.201:30120\n" +
-"#EXTINF:0,Asian Food Network (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.198:30120\n" +
-"#EXTINF:0,Asian Food Network (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.3.47:30120\n" +
-"#EXTINF:0,BBC CbeeBies (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.134:30120\n" +
-"#EXTINF:0,BBC Earth (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.24:30120\n" +
-"#EXTINF:0,BBC Lifestyle (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.52:30120\n" +
-"#EXTINF:0,BBC News (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.74:30120\n" +
-"#EXTINF:0,BGTV _ TH B\nhttp://192.168.1.7:1234/udp/225.1.1.164:30120\n" +
-"#EXTINF:0,BTV HD _ TH Bình Thu\nhttp://192.168.1.7:1234/udp/225.1.1.124:30120\n" +
-"#EXTINF:0,BTV _ TH Bình\nhttp://192.168.1.7:1234/udp/225.1.1.145:30120\n" +
-"#EXTINF:0,BTV9 B Channel (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.189:30120\n" +
-"#EXTINF:0,BTV9 B Channel (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.3.58:30120\n" +
-"#EXTINF:0,Bloomberg (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.91:30120\n" +
-"#EXTINF:0,Boomerang (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.138:30120\n" +
-"#EXTINF:0,CNA (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.202:30120\n" +
-"#EXTINF:0,CNN (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.242:30120\n" +
-"#EXTINF:0,CRTV HD _ TH Cao B\nhttp://192.168.1.7:1234/udp/225.1.1.102:30120\n" +
-"#EXTINF:0,CTV HD _ TH Cà Mau (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.104:30120\n" +
-"#EXTINF:0,Cartoon Network (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.231:30120\n" +
-"#EXTINF:0,DRT HD _ TH\nhttp://192.168.1.7:1234/udp/225.1.1.64:30120\n" +
-"#EXTINF:0,DW (English) (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.46:30120\n" +
-"#EXTINF:0,Da Vinci (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.197:30120\n" +
-"#EXTINF:0,DaNangTV1 HD _ TH TP.\nhttp://192.168.1.7:1234/udp/225.1.1.147:30120\n" +
-"#EXTINF:0,DaNangTV2 HD _ TH TP.\nhttp://192.168.1.7:1234/udp/225.1.1.146:30120\n" +
-"#EXTINF:0,Discovery Asia (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.223:30120\n" +
-"#EXTINF:0,Discovery Channel (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.238:30120\n" +
-"#EXTINF:0,Dolife Hospital\nhttp://192.168.1.7:1234/udp/225.1.1.127:30120\n" +
-"#EXTINF:0,Dreamworks (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.136:30120\n" +
-"#EXTINF:0,Event\nhttp://192.168.1.7:1234/udp/225.1.1.94:30120\n" +
-"#EXTINF:0,FPT Gi\nhttp://192.168.1.7:1234/udp/225.1.1.2:30120\n" +
-"#EXTINF:0,FPT Gi\nhttp://192.168.1.7:1234/udp/225.1.4.199:30120\n" +
-"#EXTINF:0,FPT Gi\nhttp://192.168.1.7:1234/udp/225.1.4.200:30120\n" +
-"#EXTINF:0,Fashion TV (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.227:30120\n" +
-"#EXTINF:0,France 24 (English) (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.211:30120\n" +
-"#EXTINF:0,Grand Phoenix Hotel\nhttp://192.168.1.7:1234/udp/225.1.1.66:30120\n" +
-"#EXTINF:0,H1 HD _ TH Hà N\nhttp://192.168.1.7:1234/udp/225.1.2.186:30120\n" +
-"#EXTINF:0,H2 HD _ TH Hà N\nhttp://192.168.1.7:1234/udp/225.1.1.125:30120\n" +
-"#EXTINF:0,HBO (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.233:30120\n" +
-"#EXTINF:0,HCATV5\nhttp://192.168.1.7:1234/udp/225.1.2.144:30120\n" +
-"#EXTINF:0,HGTV HD _ TH H\nhttp://192.168.1.7:1234/udp/225.1.1.157:30120\n" +
-"#EXTINF:0,HTTV HD _ TH Hà T\nhttp://192.168.1.7:1234/udp/225.1.1.75:30120\n" +
-"#EXTINF:0,HTV Keys\nhttp://192.168.1.7:1234/udp/225.1.1.177:30120\n" +
-"#EXTINF:0,HTV Keys\nhttp://192.168.1.7:1234/udp/225.1.3.127:30120\n" +
-"#EXTINF:0,HTV Th\nhttp://192.168.1.7:1234/udp/225.1.1.165:30120\n" +
-"#EXTINF:0,HTV Th\nhttp://192.168.1.7:1234/udp/225.1.3.25:30120\n" +
-"#EXTINF:0,HTV1\nhttp://192.168.1.7:1234/udp/225.1.1.180:30120\n" +
-"#EXTINF:0,HTV1\nhttp://192.168.1.7:1234/udp/225.1.3.125:30120\n" +
-"#EXTINF:0,HTV2 Vie Channel (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.193:30120\n" +
-"#EXTINF:0,HTV3\nhttp://192.168.1.7:1234/udp/225.1.1.178:30120\n" +
-"#EXTINF:0,HTV3\nhttp://192.168.1.7:1234/udp/225.1.3.36:30120\n" +
-"#EXTINF:0,HTV7 HD (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.192:30120\n" +
-"#EXTINF:0,HTV9 HD (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.190:30120\n" +
-"#EXTINF:0,HTVC Ca Nh\nhttp://192.168.1.7:1234/udp/225.1.1.185:30120\n" +
-"#EXTINF:0,HTVC Du L\nhttp://192.168.1.7:1234/udp/225.1.1.166:30120\n" +
-"#EXTINF:0,HTVC Gia\nhttp://192.168.1.7:1234/udp/225.1.1.170:30120\n" +
-"#EXTINF:0,HTVC Gia\nhttp://192.168.1.7:1234/udp/225.1.3.84:30120\n" +
-"#EXTINF:0,HTVC Ph\nhttp://192.168.1.7:1234/udp/225.1.1.171:30120\n" +
-"#EXTINF:0,HTVC Phim (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.184:30120\n" +
-"#EXTINF:0,HTVC Phim (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.3.68:30120\n" +
-"#EXTINF:0,HTVC Thu\nhttp://192.168.1.7:1234/udp/225.1.1.186:30120\n" +
-"#EXTINF:0,HTVC Thu\nhttp://192.168.1.7:1234/udp/225.1.3.28:30120\n" +
-"#EXTINF:0,HTVC+ (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.181:30120\n" +
-"#EXTINF:0,HY _ TH H\nhttp://192.168.1.7:1234/udp/225.1.1.118:30120\n" +
-"#EXTINF:0,KBS World (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.196:30120\n" +
-"#EXTINF:0,KG _ TH Kiên Giang (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.182:30120\n" +
-"#EXTINF:0,KRT _ TH Kon Tum (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.36:30120\n" +
-"#EXTINF:0,KTV HD _ TH Khánh Hòa (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.133:30120\n" +
-"#EXTINF:0,LA34 _ TH Long An\nhttp://192.168.1.7:1234/udp/225.1.1.162:30120\n" +
-"#EXTINF:0,LSTV HD _ TH L\nhttp://192.168.1.7:1234/udp/225.1.1.160:30120\n" +
-"#EXTINF:0,LTV HD _ TH Lai Châu (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.36:30120\n" +
-"#EXTINF:0,LTV HD _ TH Lâm\nhttp://192.168.1.7:1234/udp/225.1.2.177:30120\n" +
-"#EXTINF:0,NHK World Japan (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.47:30120\n" +
-"#EXTINF:0,NTV HD _ TH Ngh\nhttp://192.168.1.7:1234/udp/225.1.2.183:30120\n" +
-"#EXTINF:0,NTV HD _ TH Ninh Bình (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.185:30120\n" +
-"#EXTINF:0,NTV HD _ TH Ninh Thu\nhttp://192.168.1.7:1234/udp/225.1.2.178:30120\n" +
-"#EXTINF:0,Outdoor Channel (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.215:30120\n" +
-"#EXTINF:0,PTQ _ TH Qu\nhttp://192.168.1.7:1234/udp/225.1.2.174:30120\n" +
-"#EXTINF:0,PTV HD _ TH Phú Th\nhttp://192.168.1.7:1234/udp/225.1.2.165:30120\n" +
-"#EXTINF:0,QPVN (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.217:30120\n" +
-"#EXTINF:0,QPVN (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.3.54:30120\n" +
-"#EXTINF:0,QRTV HD _ TH Qu\nhttp://192.168.1.7:1234/udp/225.1.1.117:30120\n" +
-"#EXTINF:0,QTV1 HD _ TH Qu\nhttp://192.168.1.7:1234/udp/225.1.2.181:30120\n" +
-"#EXTINF:0,QTV3 HD _ TH Qu\nhttp://192.168.1.7:1234/udp/225.1.2.180:30120\n" +
-"#EXTINF:0,Qu\nhttp://192.168.1.7:1234/udp/225.1.3.78:30120\n" +
-"#EXTINF:0,SCTV6 (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.188:30120\n" +
-"#EXTINF:0,SCTV6 (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.3.34:30120\n" +
-"#EXTINF:0,STV _ TH S\nhttp://192.168.1.7:1234/udp/225.1.1.98:30120\n" +
-"#EXTINF:0,STV1 _ TH Sóc Tr\nhttp://192.168.1.7:1234/udp/225.1.1.159:30120\n" +
-"#EXTINF:0,TH\nhttp://192.168.1.7:1234/udp/225.1.1.163:30120\n" +
-"#EXTINF:0,TH\nhttp://192.168.1.7:1234/udp/225.1.1.210:30120\n" +
-"#EXTINF:0,THLC _ TH Lào Cai (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.119:30120\n" +
-"#EXTINF:0,THP HD _ TH TP. H\nhttp://192.168.1.7:1234/udp/225.1.1.44:30120\n" +
-"#EXTINF:0,THP HD _ TH TP. H\nhttp://192.168.1.7:1234/udp/225.1.3.80:30120\n" +
-"#EXTINF:0,THP+ HD _ TH TP. H\nhttp://192.168.1.7:1234/udp/225.1.1.113:30120\n" +
-"#EXTINF:0,THTG HD _ TH Ti\nhttp://192.168.1.7:1234/udp/225.1.3.46:30120\n" +
-"#EXTINF:0,THTPCT HD _ TH TP. C\nhttp://192.168.1.7:1234/udp/225.1.1.132:30120\n" +
-"#EXTINF:0,THTV HD _ TH Trà Vinh (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.172:30120\n" +
-"#EXTINF:0,THVL1 HD _ TH V\nhttp://192.168.1.7:1234/udp/225.1.1.155:30120\n" +
-"#EXTINF:0,THVL2 HD _ TH V\nhttp://192.168.1.7:1234/udp/225.1.1.154:30120\n" +
-"#EXTINF:0,THVL3 HD _ TH V\nhttp://192.168.1.7:1234/udp/225.1.1.235:30120\n" +
-"#EXTINF:0,THVL4 HD _ TH V\nhttp://192.168.1.7:1234/udp/225.1.2.25:30120\n" +
-"#EXTINF:0,TLC (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.236:30120\n" +
-"#EXTINF:0,TN1 HD _ TH Thái Nguyên (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.179:30120\n" +
-"#EXTINF:0,TRT _ TH Th\nhttp://192.168.1.7:1234/udp/225.1.1.161:30120\n" +
-"#EXTINF:0,TTV _ TH Thanh Hóa\nhttp://192.168.1.7:1234/udp/225.1.2.184:30120\n" +
-"#EXTINF:0,TTV _ TH Tuyên Quang (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.2.188:30120\n" +
-"#EXTINF:0,TV5 Monde Asie (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.200:30120\n" +
-"#EXTINF:0,Thanh Hóa\nhttp://192.168.1.7:1234/udp/225.1.4.162:30120\n" +
-"#EXTINF:0,The Mira Hotel\nhttp://192.168.1.7:1234/udp/225.1.1.123:30120\n" +
-"#EXTINF:0,The Ocean Resort\nhttp://192.168.1.7:1234/udp/225.1.1.121:30120\n" +
-"#EXTINF:0,WBTV (HD 8Mbps)\nhttp://192.168.1.7:1234/udp/225.1.1.139:30120\n";
+"#EXTINF:0,BibiTV\n" +
+"http://192.168.1.7:1234/udp/225.1.2.82:30120\n" +
+"#EXTINF:0,BibiTV2\n" +
+"http://192.168.1.7:1234/udp/225.1.2.103:30120\n" +
+"#EXTINF:0,VTV10\n" +
+"http://192.168.1.7:1234/udp/225.1.2.245:30120\n" +
+"#EXTINF:0,VTV1 (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.249:30120\n" +
+"#EXTINF:0,VTV10\n" +
+"https://live.fptplay53.net/live/media/vtv10/live247-hls-avc/vtv10-avc1_5600000=10000-mp4a_131600=20000.m3u8\n" +
+"#EXTINF:0,VTV2 (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.13:30120\n" +
+"#EXTINF:0,VTV3 (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.247:30120\n" +
+"#EXTINF:0,VTV4 (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.20:30120\n" +
+"#EXTINF:0,VTV5 (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.131:30120\n" +
+"#EXTINF:0,VTV5 Tây Nam Bộ\n" +
+"https://live.fptplay53.net/live/media/vtv5tnb/live-hls-avc/vtv5tnb-avc1_4000000=10000-mp4a_131600=20000.m3u8\n" +
+"#EXTINF:0,VTV5 Tây Nguyên (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.108:30120\n" +
+"#EXTINF:0,VTV6\n" +
+"http://192.168.1.7:1234/udp/225.1.2.154:30120\n" +
+"#EXTINF:0,VTV6\n" +
+"https://live-a.fptplay53.net/live/media/vtv6/live247-hls-avc/vtv6-avc1_5600000=10000-mp4a_131600=20000.m3u8\n" +
+"#EXTINF:0,VTV7 (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.96:30120\n" +
+"#EXTINF:0,VTV8 (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.166:30120\n" +
+"#EXTINF:0,VTV9 (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.128:30120\n" +
+"#EXTINF:0,\n" +
+"http://192.168.1.7:1234/udp/225.1.1.151:30120\n" +
+"#EXTINF:0,\n" +
+"http://192.168.1.7:1234/udp/225.1.1.152:30120\n" +
+"#EXTINF:0,\n" +
+"http://192.168.1.7:1234/udp/225.1.1.74:30120\n" +
+"#EXTINF:0,ABC Australia (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.21:30120\n" +
+"#EXTINF:0,AN NINH TV HD\n" +
+"https://live.fptplay53.net/fnxhd2/anninhtv_vhls.smil/chunklist_b5000000.m3u8\n" +
+"#EXTINF:0,Animal Planet (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.231:30120\n" +
+"#EXTINF:0,ANTV HD (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.169:30120\n" +
+"#EXTINF:0,Arirang\n" +
+"http://192.168.1.7:1234/udp/225.1.1.201:30120\n" +
+"#EXTINF:0,Asian Food Network (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.198:30120\n" +
+"#EXTINF:0,Asian Food Network (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.3.47:30120\n" +
+"#EXTINF:0,ATV HD _ TH An Giang (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.173:30120\n" +
+"#EXTINF:0,AXN (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.225:30120\n" +
+"#EXTINF:0,BBC CbeeBies (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.134:30120\n" +
+"#EXTINF:0,BBC Earth (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.24:30120\n" +
+"#EXTINF:0,BBC News (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.74:30120\n" +
+"#EXTINF:0,BGTV _ TH B\n" +
+"http://192.168.1.7:1234/udp/225.1.1.164:30120\n" +
+"#EXTINF:0,Bloomberg (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.91:30120\n" +
+"#EXTINF:0,Boomerang (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.138:30120\n" +
+"#EXTINF:0,BTV _ TH Bình\n" +
+"http://192.168.1.7:1234/udp/225.1.1.145:30120\n" +
+"#EXTINF:0,BTV HD _ TH Bình Thu\n" +
+"http://192.168.1.7:1234/udp/225.1.1.124:30120\n" +
+"#EXTINF:0,BTV9 B Channel (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.189:30120\n" +
+"#EXTINF:0,BTV9 B Channel (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.3.58:30120\n" +
+"#EXTINF:0,Cartoon Network (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.231:30120\n" +
+"#EXTINF:0,CNA (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.202:30120\n" +
+"#EXTINF:0,CNN (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.242:30120\n" +
+"#EXTINF:0,CRTV HD _ TH Cao B\n" +
+"http://192.168.1.7:1234/udp/225.1.1.102:30120\n" +
+"#EXTINF:0,CRTV HD _ TH Cao Bằng\n" +
+"https://live.fptplay53.net/fnxsd1/caobang_hls.smil/chunklist_b2500000.m3u8\n" +
+"#EXTINF:0,CTV HD _ TH Cà Mau (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.104:30120\n" +
+"#EXTINF:0,Da Vinci (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.197:30120\n" +
+"#EXTINF:0,DaNangTV1 HD _ TH TP.\n" +
+"http://192.168.1.7:1234/udp/225.1.1.147:30120\n" +
+"#EXTINF:0,DaNangTV1 HD _ TH TP. Đà Nẵng\n" +
+"https://live.fptplay53.net/epzsd1/danang1_hls.smil/chunklist_b2500000.m3u8\n" +
+"#EXTINF:0,DaNangTV2 HD _ TH TP.\n" +
+"http://192.168.1.7:1234/udp/225.1.1.146:30120\n" +
+"#EXTINF:0,DaNangTV2 HD _ TH TP. Đà Nẵng\n" +
+"https://live.fptplay53.net/epzsd1/danang2_hls.smil/chunklist_b2500000.m3u8\n" +
+"#EXTINF:0,Discovery Asia (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.223:30120\n" +
+"#EXTINF:0,Discovery Channel (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.238:30120\n" +
+"#EXTINF:0,Dolife Hospital\n" +
+"http://192.168.1.7:1234/udp/225.1.1.127:30120\n" +
+"#EXTINF:0,Dreamworks (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.136:30120\n" +
+"#EXTINF:0,DRT HD _ TH\n" +
+"http://192.168.1.7:1234/udp/225.1.1.64:30120\n" +
+"#EXTINF:0,DRT HD _ TH Đắk Lắk\n" +
+"https://live.fptplay53.net/epzsd1/daklak_hls.smil/chunklist_b2500000.m3u8\n" +
+"#EXTINF:0,DW (English) (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.46:30120\n" +
+"#EXTINF:0,Event\n" +
+"http://192.168.1.7:1234/udp/225.1.1.10:30120\n" +
+"#EXTINF:0,Event\n" +
+"http://192.168.1.7:1234/udp/225.1.1.93:30120\n" +
+"#EXTINF:0,Event\n" +
+"http://192.168.1.7:1234/udp/225.1.1.94:30120\n" +
+"#EXTINF:0,Fashion TV (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.227:30120\n" +
+"#EXTINF:0,FPT Gi\n" +
+"http://192.168.1.7:1234/udp/225.1.1.2:30120\n" +
+"#EXTINF:0,FPT Gi\n" +
+"http://192.168.1.7:1234/udp/225.1.4.199:30120\n" +
+"#EXTINF:0,FPT Gi\n" +
+"http://192.168.1.7:1234/udp/225.1.4.200:30120\n" +
+"#EXTINF:0,France 24 (English) (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.211:30120\n" +
+"#EXTINF:0,Grand Phoenix Hotel\n" +
+"http://192.168.1.7:1234/udp/225.1.1.66:30120\n" +
+"#EXTINF:0,H1 HD _ TH Hà N\n" +
+"http://192.168.1.7:1234/udp/225.1.2.186:30120\n" +
+"#EXTINF:0,H1 HD _ TH Hà Nội\n" +
+"https://live.fptplay53.net/fnxhd2/hanoitv1_vhls.smil/chunklist_b5000000.m3u8\n" +
+"#EXTINF:0,H2 HD _ TH Hà N\n" +
+"http://192.168.1.7:1234/udp/225.1.1.125:30120\n" +
+"#EXTINF:0,HBO (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.233:30120\n" +
+"#EXTINF:0,HCATV5\n" +
+"http://192.168.1.7:1234/udp/225.1.2.144:30120\n" +
+"#EXTINF:0,HGTV HD _ TH H\n" +
+"http://192.168.1.7:1234/udp/225.1.1.157:30120\n" +
+"#EXTINF:0,HTTV HD _ TH Hà T\n" +
+"http://192.168.1.7:1234/udp/225.1.1.75:30120\n" +
+"#EXTINF:0,HTTV HD _ TH Hà Tĩnh\n" +
+"https://live.fptplay53.net/fnxsd1/hatinh_hls.smil/chunklist_b2500000.m3u8\n" +
+"#EXTINF:0,HTV Key HD\n" +
+"https://live.fptplay53.net/epzhd1/htv4_hls.smil/chunklist_b2500000.m3u8\n" +
+"#EXTINF:0,HTV Keys\n" +
+"http://192.168.1.7:1234/udp/225.1.1.177:30120\n" +
+"#EXTINF:0,HTV Keys\n" +
+"http://192.168.1.7:1234/udp/225.1.3.127:30120\n" +
+"#EXTINF:0,HTV Th\n" +
+"http://192.168.1.7:1234/udp/225.1.1.165:30120\n" +
+"#EXTINF:0,HTV Th\n" +
+"http://192.168.1.7:1234/udp/225.1.3.25:30120\n" +
+"#EXTINF:0,HTV Thể Thao HD\n" +
+"https://live.fptplay53.net/epzhd1/htvcthethao_vhls.smil/chunklist_b5000000.m3u8\n" +
+"#EXTINF:0,HTV1\n" +
+"http://192.168.1.7:1234/udp/225.1.1.180:30120\n" +
+"#EXTINF:0,HTV1\n" +
+"http://192.168.1.7:1234/udp/225.1.3.125:30120\n" +
+"#EXTINF:0,HTV1 HD\n" +
+"https://live.fptplay53.net/epzhd1/htv1_hls.smil/chunklist_b2500000.m3u8\n" +
+"#EXTINF:0,HTV2 HD\n" +
+"https://live.fptplay53.net/epzhd1/htv2hd_vhls.smil/chunklist_b5000000.m3u8\n" +
+"#EXTINF:0,HTV2 Vie Channel (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.193:30120\n" +
+"#EXTINF:0,HTV3\n" +
+"http://192.168.1.7:1234/udp/225.1.1.178:30120\n" +
+"#EXTINF:0,HTV3\n" +
+"http://192.168.1.7:1234/udp/225.1.3.36:30120\n" +
+"#EXTINF:0,HTV3 HD\n" +
+"https://live.fptplay53.net/epzhd1/htv3_hls.smil/chunklist_b2500000.m3u8\n" +
+"#EXTINF:0,HTV7 HD (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.192:30120\n" +
+"#EXTINF:0,HTV9 HD (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.190:30120\n" +
+"#EXTINF:0,HTVC Ca Nh\n" +
+"http://192.168.1.7:1234/udp/225.1.1.185:30120\n" +
+"#EXTINF:0,HTVC CA NHẠC\n" +
+"https://live.fptplay53.net/epzhd1/htvcmusic_vhls.smil/chunklist_b5000000.m3u8\n" +
+"#EXTINF:0,HTVC Du L\n" +
+"http://192.168.1.7:1234/udp/225.1.1.166:30120\n" +
+"#EXTINF:0,HTVC Gia\n" +
+"http://192.168.1.7:1234/udp/225.1.1.170:30120\n" +
+"#EXTINF:0,HTVC Gia\n" +
+"http://192.168.1.7:1234/udp/225.1.3.84:30120\n" +
+"#EXTINF:0,HTVC GIA ĐÌNH HD\n" +
+"https://live.fptplay53.net/epzhd1/htvcgiadinh_vhls.smil/chunklist_b5000000.m3u8\n" +
+"#EXTINF:0,HTVC Ph\n" +
+"http://192.168.1.7:1234/udp/225.1.1.171:30120\n" +
+"#EXTINF:0,HTVC Phim (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.184:30120\n" +
+"#EXTINF:0,HTVC Phim (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.3.68:30120\n" +
+"#EXTINF:0,HTVC Phim HD\n" +
+"https://live.fptplay53.net/epzhd1/htvcmovieshd_vhls.smil/chunklist_b5000000.m3u8\n" +
+"#EXTINF:0,HTVC Phụ Nữ\n" +
+"https://live.fptplay53.net/epzhd1/htvcphunu_vhls.smil/chunklist_b5000000.m3u8\n" +
+"#EXTINF:0,HTVC PLUS\n" +
+"https://live.fptplay53.net/epzhd1/htvcplus_vhls.smil/chunklist_b5000000.m3u8\n" +
+"#EXTINF:0,HTVC Thu\n" +
+"http://192.168.1.7:1234/udp/225.1.1.186:30120\n" +
+"#EXTINF:0,HTVC Thu\n" +
+"http://192.168.1.7:1234/udp/225.1.3.28:30120\n" +
+"#EXTINF:0,HTVC Thuần Việt\n" +
+"https://live.fptplay53.net/epzhd1/htvcthuanviethd_vhls.smil/chunklist_b5000000.m3u8\n" +
+"#EXTINF:0,HTVC+ (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.181:30120\n" +
+"#EXTINF:0,HY _ TH H\n" +
+"http://192.168.1.7:1234/udp/225.1.1.118:30120\n" +
+"#EXTINF:0,HY _ TH Hưng Yên\n" +
+"https://live.fptplay53.net/fnxsd1/hungyen_hls.smil/chunklist_b2500000.m3u8\n" +
+"#EXTINF:0,KBS World (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.196:30120\n" +
+"#EXTINF:0,KG _ TH Kiên Giang (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.182:30120\n" +
+"#EXTINF:0,Kix\n" +
+"https://live.fptplay53.net/fnxhd2/kixhd_vhls.smil/chunklist_b5000000.m3u8\n" +
+"#EXTINF:0,KRT _ TH Kon Tum (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.36:30120\n" +
+"#EXTINF:0,KTV HD _ TH Khánh Hòa (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.133:30120\n" +
+"#EXTINF:0,LA34 _ TH Long An\n" +
+"http://192.168.1.7:1234/udp/225.1.1.162:30120\n" +
+"#EXTINF:0,LSTV HD _ TH L\n" +
+"http://192.168.1.7:1234/udp/225.1.1.160:30120\n" +
+"#EXTINF:0,LSTV HD _ TH Lạng Sơn\n" +
+"https://live.fptplay53.net/fnxsd1/langson_hls.smil/chunklist_b2500000.m3u8\n" +
+"#EXTINF:0,LTV HD _ TH Lai Châu (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.36:30120\n" +
+"#EXTINF:0,LTV HD _ TH Lâm\n" +
+"http://192.168.1.7:1234/udp/225.1.2.177:30120\n" +
+"#EXTINF:0,LTV HD _ TH Lâm Đồng\n" +
+"https://live.fptplay53.net/epzsd1/lamdong_hls.smil/chunklist_b2500000.m3u8\n" +
+"#EXTINF:0,NHK World Japan (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.47:30120\n" +
+"#EXTINF:0,NTV HD _ TH Ngh\n" +
+"http://192.168.1.7:1234/udp/225.1.2.183:30120\n" +
+"#EXTINF:0,NTV HD _ TH Nghệ An\n" +
+"https://live.fptplay53.net/fnxsd1/nghean_hls.smil/chunklist_b2500000.m3u8\n" +
+"#EXTINF:0,NTV HD _ TH Ninh Bình (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.185:30120\n" +
+"#EXTINF:0,NTV HD _ TH Ninh Thu\n" +
+"http://192.168.1.7:1234/udp/225.1.2.178:30120\n" +
+"#EXTINF:0,Outdoor Channel (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.215:30120\n" +
+"#EXTINF:0,PTP HD _ TH Phú Yên (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.58:30120\n" +
+"#EXTINF:0,PTQ _ TH Qu\n" +
+"http://192.168.1.7:1234/udp/225.1.2.174:30120\n" +
+"#EXTINF:0,PTQ _ TH Quảng Ngãi\n" +
+"https://live.fptplay53.net/epzsd1/quangngai_hls.smil/chunklist_b2500000.m3u8\n" +
+"#EXTINF:0,PTV HD _ TH Phú Th\n" +
+"http://192.168.1.7:1234/udp/225.1.2.165:30120\n" +
+"#EXTINF:0,PTV HD _ TH Phú Thọ\n" +
+"https://live.fptplay53.net/fnxsd1/phutho_hls.smil/chunklist_b2500000.m3u8\n" +
+"#EXTINF:0,QPVN (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.217:30120\n" +
+"#EXTINF:0,QPVN (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.3.54:30120\n" +
+"#EXTINF:0,QRT HD _ TH Qu\n" +
+"http://192.168.1.7:1234/udp/225.1.2.50:30120\n" +
+"#EXTINF:0,QRTV HD _ TH Qu\n" +
+"http://192.168.1.7:1234/udp/225.1.1.117:30120\n" +
+"#EXTINF:0,QRTV HD _ TH Quảng Trị\n" +
+"https://live.fptplay53.net/epzsd1/quangtri_hls.smil/chunklist_b2500000.m3u8\n" +
+"#EXTINF:0,QTV1 HD _ TH Qu\n" +
+"http://192.168.1.7:1234/udp/225.1.2.181:30120\n" +
+"#EXTINF:0,QTV1 HD _ TH Quảng Ninh\n" +
+"https://live.fptplay53.net/fnxsd1/quangninh1_hls.smil/chunklist_b2500000.m3u8\n" +
+"#EXTINF:0,QTV3 HD _ TH Qu\n" +
+"http://192.168.1.7:1234/udp/225.1.2.180:30120\n" +
+"#EXTINF:0,QTV3 HD _ TH Quảng Ninh\n" +
+"https://live.fptplay53.net/fnxsd1/quangninh3_hls.smil/chunklist_b2500000.m3u8\n" +
+"#EXTINF:0,Qu\n" +
+"http://192.168.1.7:1234/udp/225.1.3.78:30120\n" +
+"#EXTINF:0,SCTV6 (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.188:30120\n" +
+"#EXTINF:0,SCTV6 (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.3.34:30120\n" +
+"#EXTINF:0,STV _ TH S\n" +
+"http://192.168.1.7:1234/udp/225.1.1.98:30120\n" +
+"#EXTINF:0,STV _ TH Sơn La\n" +
+"https://live.fptplay53.net/fnxsd1/sonla_hls.smil/chunklist_b2500000.m3u8\n" +
+"#EXTINF:0,STV1 _ TH Sóc Tr\n" +
+"http://192.168.1.7:1234/udp/225.1.1.159:30120\n" +
+"#EXTINF:0,TH\n" +
+"http://192.168.1.7:1234/udp/225.1.1.163:30120\n" +
+"#EXTINF:0,TH\n" +
+"http://192.168.1.7:1234/udp/225.1.1.210:30120\n" +
+"#EXTINF:0,Thanh Hóa\n" +
+"http://192.168.1.7:1234/udp/225.1.4.162:30120\n" +
+"#EXTINF:0,The Mira Hotel\n" +
+"http://192.168.1.7:1234/udp/225.1.1.123:30120\n" +
+"#EXTINF:0,The Ocean Resort\n" +
+"http://192.168.1.7:1234/udp/225.1.1.121:30120\n" +
+"#EXTINF:0,THLC _ TH Lào Cai (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.119:30120\n" +
+"#EXTINF:0,THP HD _ TH TP. H\n" +
+"http://192.168.1.7:1234/udp/225.1.1.44:30120\n" +
+"#EXTINF:0,THP HD _ TH TP. H\n" +
+"http://192.168.1.7:1234/udp/225.1.3.80:30120\n" +
+"#EXTINF:0,THP HD _ TH TP. Hải Phòng\n" +
+"https://live.fptplay53.net/fnxsd1/haiphong_hls.smil/chunklist_b2500000.m3u8\n" +
+"#EXTINF:0,THP+ HD _ TH TP. H\n" +
+"http://192.168.1.7:1234/udp/225.1.1.113:30120\n" +
+"#EXTINF:0,THTG HD _ TH Ti\n" +
+"http://192.168.1.7:1234/udp/225.1.3.46:30120\n" +
+"#EXTINF:0,THTPCT HD _ TH TP. C\n" +
+"http://192.168.1.7:1234/udp/225.1.1.132:30120\n" +
+"#EXTINF:0,THTV HD _ TH Trà Vinh (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.172:30120\n" +
+"#EXTINF:0,THVL1 HD _ TH V\n" +
+"http://192.168.1.7:1234/udp/225.1.1.155:30120\n" +
+"#EXTINF:0,THVL2 HD - Vĩnh Long 2\n" +
+"https://live.fptplay53.net/epzhd2/vinhlong2_vhls.smil/chunklist_b5000000.m3u8\n" +
+"#EXTINF:0,THVL2 HD _ TH V\n" +
+"http://192.168.1.7:1234/udp/225.1.1.154:30120\n" +
+"#EXTINF:0,THVL3 HD - Vĩnh Long 3\n" +
+"https://live.fptplay53.net/epzhd2/vinhlong3_vhls.smil/chunklist_b5000000.m3u8\n" +
+"#EXTINF:0,THVL3 HD _ TH V\n" +
+"http://192.168.1.7:1234/udp/225.1.1.235:30120\n" +
+"#EXTINF:0,THVL4 HD _ TH V\n" +
+"http://192.168.1.7:1234/udp/225.1.2.25:30120\n" +
+"#EXTINF:0,TLC (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.236:30120\n" +
+"#EXTINF:0,TN1 HD _ TH Thái Nguyên (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.179:30120\n" +
+"#EXTINF:0,TRT _ TH Th\n" +
+"http://192.168.1.7:1234/udp/225.1.1.161:30120\n" +
+"#EXTINF:0,TRT _ TH Thừa Thiên Huế\n" +
+"https://live.fptplay53.net/epzsd1/hue_hls.smil/chunklist_b2500000.m3u8\n" +
+"#EXTINF:0,TTV _ TH Thanh Hóa\n" +
+"http://192.168.1.7:1234/udp/225.1.2.184:30120\n" +
+"#EXTINF:0,TTV _ TH Tuyên Quang (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.2.188:30120\n" +
+"#EXTINF:0,TTV HD _ TH Tuyên Quang\n" +
+"https://live.fptplay53.net/fnxsd1/tuyenquang_hls.smil/chunklist_b2500000.m3u8\n" +
+"#EXTINF:0,TV5 Monde Asie (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.200:30120\n" +
+"#EXTINF:0,Vietnam Today\n" +
+"https://live.fptplay53.net/fnxhd1/vntoday_vhls.smil/chunklist_b5000000.m3u8\n" +
+"#EXTINF:0,WBTV (HD 8Mbps)\n" +
+"http://192.168.1.7:1234/udp/225.1.1.139:30120\n" +
+"#EXTINF:0,ĐNRTV1 HD _ TH Đồng Nai\n" +
+"https://live.fptplay53.net/epzsd1/dongnai1_hls.smil/chunklist_b2500000.m3u8\n" +
+"#EXTINF:0,ĐNRTV2 HD _ TH Đồng Nai\n" +
+"https://live.fptplay53.net/epzsd1/dongnai2_hls.smil/chunklist_b2500000.m3u8\n" +
+"#EXTINF:0,ĐTV _ TH Điện Biên\n" +
+"https://live.fptplay53.net/fnxsd1/dienbien_hls.smil/chunklist_b2500000.m3u8\n";
 
   var channels = [];
   var displayOrder = [];
